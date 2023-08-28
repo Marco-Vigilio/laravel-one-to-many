@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Type;
 use App\Models\Admin\Project;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,7 +15,7 @@ class ProjectSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        $typeIds = Type::class()->pluck("id");
+        $typeIds = Type::all()->pluck("id");
 
         for ($i=0; $i < 100; $i++) { 
             $newProject = new Project();

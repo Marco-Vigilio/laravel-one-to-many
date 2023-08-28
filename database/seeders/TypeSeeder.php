@@ -16,7 +16,7 @@ class TypeSeeder extends Seeder
         $types = [
             "economy", "eco-green", "fun",
         ];
-
+        
         foreach ($types as $type) {
             $newType = new Type();
             $newType->type = $type;
